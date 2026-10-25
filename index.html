@@ -205,6 +205,15 @@ h2{margin:0 0 36px;font:800 clamp(2.2rem,5vw,3.6rem)/1 var(--fd);letter-spacing:
 </div>
 </article>
 <article class="proj">
+<div><h3>SlotCheck</h3><p class="tag">HTML</p></div>
+<div>
+<ul>
+<li>A tool I built for students at my university that checks whether your registered courses clash with each other.</li>
+</ul>
+<div class="links"><a href="https://github.com/umarfarooqkhan-dev/slotcheck">Repo</a></div>
+</div>
+</article>
+<article class="proj">
 <div><h3>FreshRoute</h3><p class="tag">Flutter · Dart · Supabase</p></div>
 <div>
 <ul>
@@ -284,7 +293,8 @@ h2{margin:0 0 36px;font:800 clamp(2.2rem,5vw,3.6rem)/1 var(--fd);letter-spacing:
 const P=[
 {t:'PickIt',k:'Laravel · Flutter · MySQL',d:'Friends swipe on restaurants and activities until the group finds a match.',c:'var(--coral)',l:[['Backend','https://github.com/umarfarooqkhan-dev/pickit-backend'],['App','https://github.com/umarfarooqkhan-dev/pickit-app']]},
 {t:'FreshRoute',k:'Flutter · Dart · Supabase',d:'A marketplace where farmers sell directly to customers.',c:'var(--mint)',l:[['Repo','https://github.com/umarfarooqkhan-dev/freshroute']]},
-{t:'Hotel Management',k:'HTML · CSS · JavaScript',d:'Room booking, check-in and check-out, and billing in vanilla JS.',c:'var(--lemon)',l:[['Repo','https://github.com/umarfarooqkhan-dev/HotelManagmentSystem']]}
+{t:'Hotel Management',k:'HTML · CSS · JavaScript',d:'Room booking, check-in and check-out, and billing in vanilla JS.',c:'var(--lemon)',l:[['Repo','https://github.com/umarfarooqkhan-dev/HotelManagmentSystem']]},
+{t:'SlotCheck',k:'HTML',d:'Checks whether your registered university courses clash with each other.',c:'var(--pink)',l:[['Repo','https://github.com/umarfarooqkhan-dev/slotcheck']]}
 ];
 const deck=document.getElementById('deck'),status=document.getElementById('status');
 let i=0,first=true,busy=false;
@@ -425,7 +435,7 @@ if(fine){
   if(!t)return;
   const H=[],L={email:'umarfarooq1.kh@gmail.com',gh:'https://github.com/umarfarooqkhan-dev',li:'https://www.linkedin.com/in/umar-farooq-khan-7a6a123a8/'};
   let hi=0;
-  const R={pickit:[['backend','https://github.com/umarfarooqkhan-dev/pickit-backend'],['app','https://github.com/umarfarooqkhan-dev/pickit-app']],freshroute:[['repo','https://github.com/umarfarooqkhan-dev/freshroute']],hotel:[['repo','https://github.com/umarfarooqkhan-dev/HotelManagmentSystem']]};
+  const R={pickit:[['backend','https://github.com/umarfarooqkhan-dev/pickit-backend'],['app','https://github.com/umarfarooqkhan-dev/pickit-app']],freshroute:[['repo','https://github.com/umarfarooqkhan-dev/freshroute']],hotel:[['repo','https://github.com/umarfarooqkhan-dev/HotelManagmentSystem']],slotcheck:[['repo','https://github.com/umarfarooqkhan-dev/slotcheck']]};
   const G={work:'#work',projects:'#work',about:'#about',stack:'#stack',skills:'#stack',education:'#education',hobbies:'#hobbies',stickers:'#stickers',doodle:'#play',play:'#play',contact:'#contact',top:'#top'};
   const F=['Everything is a widget.','It works on my machine.','Ship it, then refactor it.','There are two hard things: naming, caching, and off-by-one errors.'];
   function line(x,c){const d=document.createElement('div');if(c)d.className=c;if(typeof x==='object'){d.appendChild(document.createTextNode(x.t||''));const a=document.createElement('a');a.href=x.u;a.target='_blank';a.rel='noopener';a.textContent=x.l;d.appendChild(a)}else d.textContent=x;out.appendChild(d);out.scrollTop=out.scrollHeight}
@@ -433,9 +443,9 @@ if(fine){
   function show(){t.hidden=false;inp.focus();if(!out.childNodes.length)say(['Welcome to Umar’s terminal.','Type help to see what it can do.'])}
   function hide(){t.hidden=true;btn.focus()}
   const C={
-    help:function(){return['about         who I am','projects      what I built','skills        my stack','education     where I study','hobbies       outside the code','contact       how to reach me','open <name>   pickit, freshroute or hotel','goto <name>   jump to a section','night / day  switch the theme','clear         clear the screen','exit          close the terminal','','There are a few hidden ones too.']},
+    help:function(){return['about         who I am','projects      what I built','skills        my stack','education     where I study','hobbies       outside the code','contact       how to reach me','open <name>   pickit, freshroute, hotel or slotcheck','goto <name>   jump to a section','night / day  switch the theme','clear         clear the screen','exit          close the terminal','','There are a few hidden ones too.']},
     about:function(){return['Umar Farooq Khan, CS student at COMSATS University Islamabad (Wah Campus).','Builds mobile and web apps with Flutter and Laravel.','Looking for a software development internship.']},
-    projects:function(){return['PickIt             group decision app (Laravel, Flutter, MySQL)','FreshRoute         farm to customer marketplace (Flutter, Supabase)','Hotel Management   booking and billing web app (HTML, CSS, JS)','','Try: open pickit']},
+    projects:function(){return['PickIt             group decision app (Laravel, Flutter, MySQL)','FreshRoute         farm to customer marketplace (Flutter, Supabase)','Hotel Management   booking and billing web app (HTML, CSS, JS)','SlotCheck          checks if your uni courses clash (HTML)','','Try: open pickit']},
     pickit:function(){return['PickIt: friends swipe on places until the group agrees.','Try: open pickit']},
     skills:function(){return['Languages   Python, JavaScript, Dart, PHP, HTML5, CSS3','Frameworks  Flutter, Laravel, Bootstrap, Tailwind CSS','Databases   MySQL, Supabase, SQL','Tools       Git, VS Code, Android Studio']},
     education:function(){return['BS Computer Science, COMSATS Wah Campus. 5th semester, CGPA 3.58. Class of 2028.','Intermediate (Pre-Medical), KIPS College, Rawalpindi, 2024.']},
@@ -462,7 +472,7 @@ if(fine){
     if(c==='sudo'){if(s.indexOf('hire')>-1){say(['Permission granted.','Preparing offer letter... 100%','Just kidding. Email me instead:']);line({t:'',l:L.email,u:'mailto:'+L.email})}else say('Nice try. This incident will be reported.','e');return}
     if(c==='clear'){out.textContent='';return}
     if(c==='exit'||c==='quit'){hide();return}
-    if(c==='open'){const r=R[a[1]];if(!r)return say('Open what? pickit, freshroute or hotel','e');return say(r.map(function(x){return{t:x[0]+'  ',l:x[1],u:x[1]}}))}
+    if(c==='open'){const r=R[a[1]];if(!r)return say('Open what? pickit, freshroute, hotel or slotcheck','e');return say(r.map(function(x){return{t:x[0]+'  ',l:x[1],u:x[1]}}))}
     if(c==='goto'||c==='cd'){const sel=G[a[1]];if(!sel)return say('Where to? Try: '+Object.keys(G).join(', '),'e');hide();document.querySelector(sel).scrollIntoView({behavior:'smooth'});return}
     if(c==='echo')return say(v.trim().slice(5));
     if(c==='cat'){if(a[1]==='resume.txt')return say(C.about());return say('cat: '+(a[1]||'')+': Permission denied','e')}
@@ -486,7 +496,7 @@ if(fine){
 })();
 (function(){
   const wall=document.getElementById('wall');if(!wall)return;
-  const D=[['Flutter','#8fd3ff'],['Laravel','#ff6b81'],['Dart','#7df0b2'],['PHP','#c9b8ff'],['JavaScript','#ffe55c'],['MySQL','#8fd3ff'],['Supabase','#7df0b2'],['Git','#ff9ad5'],['PickIt','#ffe55c'],['FreshRoute','#7df0b2'],['Football ⚽','#ffffff'],['Movies 🎬','#ff9ad5'],['COMSATS','#8fd3ff'],['Class of 2028','#ffe55c'],['Rawalpindi','#c9b8ff']];
+  const D=[['Flutter','#8fd3ff'],['Laravel','#ff6b81'],['Dart','#7df0b2'],['PHP','#c9b8ff'],['JavaScript','#ffe55c'],['MySQL','#8fd3ff'],['Supabase','#7df0b2'],['Git','#ff9ad5'],['PickIt','#ffe55c'],['FreshRoute','#7df0b2'],['SlotCheck','#ff9ad5'],['Football ⚽','#ffffff'],['Movies 🎬','#ff9ad5'],['COMSATS','#8fd3ff'],['Class of 2028','#ffe55c'],['Rawalpindi','#c9b8ff']];
   const KEY='ufk-stickers-1';let st=[],z=1;
   function cl(v){return Math.min(1,Math.max(0,v))}
   function init(){return D.map(function(d,i){const j=function(k){return((i*k)%11)/11-.5};return{x:cl((i%5)/4+j(7)*.1),y:cl(Math.floor(i/5)/2+j(5)*.16),r:((i*37)%17)-8}})}
